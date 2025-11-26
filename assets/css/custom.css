@@ -1,0 +1,25 @@
+/* ----- 自訂配色 ----- */
+
+/* 主色：珊瑚橘 */
+a, a:hover, .post-preview a {
+  color: #EA8A71 !important;
+}
+
+.navbar-brand, .navbar-nav li.nav-item a.nav-link {
+  color: #EA8A71 !important;
+}
+
+/* 副色：薄荷綠 */
+a:hover {
+  color: #51E7C4 !important;
+}
+
+/* 背景：淡藍綠 */
+body {
+  background-color: #A6F1F715;
+}
+
+/* 文章標題 */
+.post-heading h1 {
+  color: #51E7C4 !important;
+}
