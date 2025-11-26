@@ -1,25 +1,66 @@
-title:              Clean Blog
-email:              your-email@example.com
-description:        A Blog Theme by Start Bootstrap
-author:             Start Bootstrap
-baseurl:            "/startbootstrap-clean-blog-jekyll"
-url:                "https://startbootstrap.github.io"
+# -----------------------------
+# 基本設定
+# -----------------------------
+title: "MiniGo 收納誌"
+description: "分享簡約生活、整理術與收納技巧"
+url: "https://minigogoo.com"
+author: 
+  name: "MiniGo"
 
-# Social Profiles
-twitter_username:   SBootstrap
-github_username:    StartBootstrap
-facebook_username:  StartBootstrap
-instagram_username:  
-linkedin_username:
+# -----------------------------
+# Jekyll 設定
+# -----------------------------
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+collections:
+  posts:
+    output: true
 
-# Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+# -----------------------------
+# Clean Blog 主題設定
+# -----------------------------
+# 注意：一定要使用 remote_theme 才能套用 Clean Blog
+remote_theme: StartBootstrap/startbootstrap-clean-blog-jekyll
 
-# Build settings
-markdown:           kramdown
-paginate:           5
-paginate_path:      "/posts/page:num/"
+paginate: 5
+paginate_path: "/page:num/"
 plugins:
-  - jekyll-feed
   - jekyll-paginate
-  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+  - jekyll-remote-theme
+
+# -----------------------------
+# 封面（首頁大圖）
+# 可自行準備圖片放 assets/img/header.jpg
+# -----------------------------
+header:
+  background: "/assets/img/home-bg.jpg"
+
+# -----------------------------
+# 自訂 CSS（你的三大主色）
+# -----------------------------
+sass:
+  style: compressed
+
+# 載入自訂 CSS
+include:
+  - assets/css
+
+# -----------------------------
+# 社群資訊（之後如果你要加）
+# -----------------------------
+social:
+  email: ""
+  instagram: ""
+  github: "https://github.com/wks9722"
+  facebook: ""
+
+# -----------------------------
+# 排除不需要的東西
+# -----------------------------
+exclude:
+  - "node_modules"
+  - "package.json"
+  - "gulpfile.js"
+  - "package-lock.json"
+
