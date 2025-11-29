@@ -4,6 +4,7 @@
 title: "MiniGo 收納誌"
 description: "分享簡約生活、整理術與收納技巧"
 url: "https://minigogoo.com"
+baseurl: ""   # ← ★★ 必須加上這行（CSS / JS 才能正確載入）
 author: 
   name: "MiniGo"
 
@@ -20,7 +21,6 @@ collections:
 # -----------------------------
 # Clean Blog 主題設定
 # -----------------------------
-# 注意：一定要使用 remote_theme 才能套用 Clean Blog
 remote_theme: StartBootstrap/startbootstrap-clean-blog-jekyll
 
 paginate: 5
@@ -31,23 +31,21 @@ plugins:
 
 # -----------------------------
 # 封面（首頁大圖）
-# 可自行準備圖片放 assets/img/header.jpg
 # -----------------------------
 header:
   background: "/assets/img/home-bg.jpg"
 
 # -----------------------------
-# 自訂 CSS（你的三大主色）
+# 自訂 CSS（你的三大主色可用此延伸）
 # -----------------------------
 sass:
   style: compressed
 
-# 載入自訂 CSS
 include:
   - assets/css
 
 # -----------------------------
-# 社群資訊（之後如果你要加）
+# 社群資訊
 # -----------------------------
 social:
   email: ""
@@ -62,5 +60,4 @@ exclude:
   - "node_modules"
   - "package.json"
   - "gulpfile.js"
-  - "package-lock.json"
-
+  - "package-loc
